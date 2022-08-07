@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,8 +51,8 @@ public class RestApiDemoController {
         return coffee;
     }
 
-    @PutMapping("/coffees/{id}")
-    Coffee putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
+    @PutMapping("/{id}")
+    ResponseEntity<Coffee> putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
         // TODO: process PUT request
         int coffeeIndex = -1;
         for (Coffee c : coffees) {
@@ -58,7 +61,12 @@ public class RestApiDemoController {
                 coffees.set(coffeeIndex, coffee);
             }
         }
-        return (coffeeIndex == -1) ? postMCoffee(coffee) : coffee;
+        return (coffeeIndex == -1) ? new ResponseEntity<>(postMCoffee(coffee), HttpStatus.CREATED)
+                : new ResponseEntity<Coffee>(coffee, HttpStatus.OK);
     }
 
+    @DeleteMapping("/cooffes/{id}")
+    void deleteCoffee(@PathVariable String id) {
+        coffees.removeIf(c -> c.getId().equals(id));
+    }
 }
