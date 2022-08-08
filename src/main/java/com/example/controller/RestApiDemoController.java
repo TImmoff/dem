@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-public class RestApiDemoController {
+@RequestMapping("/coffees")
+class RestApiDemoController {
     private List<Coffee> coffees = new ArrayList<>();
 
     public RestApiDemoController() {
@@ -29,12 +29,12 @@ public class RestApiDemoController {
                 new Coffee("Cafe Tres")));
     }
 
-    @RequestMapping(value = "/coffees", method = RequestMethod.GET)
+    @GetMapping
     Iterable<Coffee> getCoffees() {
         return coffees;
     }
 
-    @GetMapping("?coffees/{id}")
+    @GetMapping("/{id}")
     Optional<Coffee> getCoffeeById(@PathVariable String id) {
         for (Coffee c : coffees) {
             if (c.getId().equals(id)) {
@@ -45,7 +45,7 @@ public class RestApiDemoController {
     }
 
     @PostMapping(value = "path")
-    Coffee postMCoffee(@RequestBody Coffee coffee) {
+    Coffee postCoffee(@RequestBody Coffee coffee) {
         // TODO: process POST request
         coffees.add(coffee);
         return coffee;
@@ -61,7 +61,7 @@ public class RestApiDemoController {
                 coffees.set(coffeeIndex, coffee);
             }
         }
-        return (coffeeIndex == -1) ? new ResponseEntity<>(postMCoffee(coffee), HttpStatus.CREATED)
+        return (coffeeIndex == -1) ? new ResponseEntity<>(postCoffee(coffee), HttpStatus.CREATED)
                 : new ResponseEntity<Coffee>(coffee, HttpStatus.OK);
     }
 
