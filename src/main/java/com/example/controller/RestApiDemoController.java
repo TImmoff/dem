@@ -44,7 +44,7 @@ class RestApiDemoController {
         return Optional.empty();
     }
 
-    @PostMapping(value = "path")
+    @PostMapping
     Coffee postCoffee(@RequestBody Coffee coffee) {
         // TODO: process POST request
         coffees.add(coffee);
@@ -52,7 +52,7 @@ class RestApiDemoController {
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<Coffee> putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
+    Coffee putCoffee(@PathVariable String id, @RequestBody Coffee coffee) {
         // TODO: process PUT request
         int coffeeIndex = -1;
         for (Coffee c : coffees) {
@@ -61,11 +61,10 @@ class RestApiDemoController {
                 coffees.set(coffeeIndex, coffee);
             }
         }
-        return (coffeeIndex == -1) ? new ResponseEntity<>(postCoffee(coffee), HttpStatus.CREATED)
-                : new ResponseEntity<Coffee>(coffee, HttpStatus.OK);
+        return (coffeeIndex == -1) ? postCoffee(coffee) : coffee;
     }
 
-    @DeleteMapping("/cooffes/{id}")
+    @DeleteMapping("/{id}")
     void deleteCoffee(@PathVariable String id) {
         coffees.removeIf(c -> c.getId().equals(id));
     }
