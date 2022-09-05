@@ -2,28 +2,36 @@ package com.example.controller;
 
 import java.util.UUID;
 
-public class Coffee {
-    private final String id;
-    private String name;
+import javax.persistence.*;
 
-    public Coffee(String id, String name) {
+@Entity
+public class Coffee {
+    @Id
+    String id;
+    String name;
+
+    Coffee(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Coffee(String name) {
+    Coffee(String name) {
         this(UUID.randomUUID().toString(), name);
     }
 
-    public String getId() {
+    String getId() {
         return id;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    void setId(String id) {
+        this.id = id;
+    }
+
+    void setName(String name) {
         this.name = name;
     }
 
