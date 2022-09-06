@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.model;
 
 import java.util.UUID;
 
@@ -8,30 +8,34 @@ import javax.persistence.*;
 public class Coffee {
     @Id
     String id;
+    @Column
     String name;
 
-    Coffee(String id, String name) {
+    public Coffee() {
+    }
+
+    public Coffee(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    Coffee(String name) {
+    public Coffee(String name) {
         this(UUID.randomUUID().toString(), name);
     }
 
-    String getId() {
+    public String getId() {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setId(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
