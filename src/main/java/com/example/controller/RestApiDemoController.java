@@ -36,6 +36,12 @@ class RestApiDemoController {
 
     @GetMapping
     Iterable<Coffee> getCoffees() {
+        // sadasd
+        // sadasd
+        // sadasd
+        // sadasd
+        // sadasd
+        // sadasd
         return coffeeRepository.findAll();
     }
 
