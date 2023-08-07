@@ -1,0 +1,83 @@
+[33mcommit b2b437c4aa3c6dc93eccbc653df4e0158cfa8c99[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 34f5a80 ca9f98d
+Author: TImmoff <93943514+TImmoff@users.noreply.github.com>
+Date:   Wed Aug 2 17:05:24 2023 +0300
+
+    Merge pull request #2 from TImmoff:br1
+    
+    asd
+
+[33mcommit ca9f98d323beb6014a410e760bbd8be73f547437[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Wed Aug 2 16:59:52 2023 +0300
+
+    asd
+
+[33mcommit 34f5a80a235def15b979d732168f8bb753e10526[m
+Merge: 1598112 3c02560
+Author: TImmoff <93943514+TImmoff@users.noreply.github.com>
+Date:   Wed Aug 2 16:32:39 2023 +0300
+
+    Merge pull request #1 from TImmoff:sidorpg-issue1-try-conflict
+    
+    issue1-try-conflict
+
+[33mcommit 3c025606356b6a1d2ad5f26e7cd1d93405693bba[m
+Author: Pavel Sidor <sidorpg@gmail.com>
+Date:   Wed Aug 2 16:16:57 2023 +0300
+
+    issue1-try-conflict
+
+[33mcommit 159811227c0e085ba034847c90a7329ea5fa9c39[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Tue Sep 6 22:38:26 2022 +0300
+
+    yay!! that works :D
+
+[33mcommit 4ec68847ca4fd29600360c05b1116045f4a57ab7[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Mon Sep 5 23:44:40 2022 +0300
+
+    trying to add hyb and still doesnt work ((
+
+[33mcommit a310742c5e1f7b3be63c1fa3ed4b742335156b3a[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Thu Sep 1 23:25:31 2022 +0300
+
+    doesnt work((
+
+[33mcommit dfd106f544b3b4f77512fea8b4c106756d7be4b8[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Sun Aug 21 23:50:25 2022 +0300
+
+    add db
+
+[33mcommit 5e8d71545bf3584461819ba3245ef0414039a2f3[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Sat Aug 13 21:09:31 2022 +0300
+
+    finishmappings yay :)
+
+[33mcommit 6cec4500e23bccc36ba26f43f56b92ce6fd2c1bf[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Tue Aug 9 00:01:02 2022 +0300
+
+    fixed getmap but not fixed post mapping
+
+[33mcommit 57e516e755577d19d328ef5df47385b0fee25689[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Sun Aug 7 07:41:43 2022 +0300
+
+    putmapchanges and delete
+
+[33mcommit d9de15483df2b228ca764a9dc4fddc00d83a6716[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Sat Jul 30 13:41:49 2022 +0300
+
+    put/post..
+
+[33mcommit 858949c74fb88c33c1f9e4b117f58ba06f45bfe9[m
+Author: Korotin Tima <korotin.tima@mail.ru>
+Date:   Wed Jul 27 13:43:24 2022 +0300
+
+    n
